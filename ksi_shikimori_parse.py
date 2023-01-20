@@ -28,7 +28,8 @@ def get_anime_list(nickname, type='completed'):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53'
         '7.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36'}
-    print(url)
+    # print('Получение списка аниме "' + type +
+    #       '" пользователя ' + nickname + '...')
     r = requests.get(url, headers=headers)
     soup = BeautifulSoup(r.text, 'html.parser')
     anime_list = []
